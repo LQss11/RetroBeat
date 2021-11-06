@@ -23,13 +23,13 @@ public class Controller : MonoBehaviour
 
 }
 */
-        if (Input.GetKey("q") && transform.position.x > -2)
+        if (Input.GetKey("q") && transform.position.x > -2.5)
         {
             transform.position -= Time.deltaTime * transform.right * speed;
             if (transform.position.y > -1.5)
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, lerpRotation), Time.deltaTime * t);
         }
-        if (Input.GetKey("d") && transform.position.x < 2)
+        if (Input.GetKey("d") && transform.position.x < 2.5)
         {
             transform.position += Time.deltaTime * transform.right * speed;
             if (transform.position.y > -1.5)
@@ -37,7 +37,7 @@ public class Controller : MonoBehaviour
 
 
         }
-        if (Input.GetKey("z") && transform.position.y < 4)
+        if (Input.GetKey("z") && transform.position.y < 5)
         {
 
             transform.position += Time.deltaTime * transform.up * speed;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2544068332494357616}
   - component: {fileID: 2153381130074564886}
   - component: {fileID: 6720834361034652386}
-  - component: {fileID: 2638283263297935930}
+  - component: {fileID: -1072452151462655589}
   m_Layer: 0
   m_Name: Note
   m_TagString: Note
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377213054638463592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 2.5, z: 15}
+  m_LocalPosition: {x: 0, y: 5, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2638283263297935930
+--- !u!114 &-1072452151462655589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

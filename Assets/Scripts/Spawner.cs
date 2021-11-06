@@ -7,7 +7,6 @@ public class Spawner : MonoBehaviour
 
     public float timerSeconds;
     public float songLength;
-    public float bpm;
     public GameObject obj;
     private bool songPlayed;
     private static float z = 15;
@@ -18,9 +17,11 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timerSeconds = GetComponent<AudioSource>().clip.length;
-        songLength = GetComponent<AudioSource>().clip.length + 0.01f;
-        InvokeRepeating("Spawn", 2, (60 / bpm) * 2);
+        //GameObject.FindGameObjectWithTag("MenuSongManager").GetComponent<AudioSource>().clip = SongController.selectedAudioClip;
+
+        timerSeconds = SongController.selectedAudioClip.length;
+        songLength = SongController.selectedAudioClip.length + 0.01f;
+        InvokeRepeating("Spawn", 2, (60 / SongController.bpm) * 2);
         InvokeRepeating("CountDown", 2, 1);
 
     }
@@ -34,20 +35,22 @@ public class Spawner : MonoBehaviour
     {
         if (!songPlayed)
         {
+            GetComponent<AudioSource>().clip = SongController.selectedAudioClip;
+
             GetComponent<AudioSource>().Play();
             songPlayed = true;
         }
-        if (timerSeconds < songLength)
+        if (timerSeconds < songLength / 2)
         {
-            Difficulty(1);
+            Difficulty(6);
         }
         else if (timerSeconds < songLength / 4)
         {
             Difficulty(3);
         }
-        else if (timerSeconds < songLength / 2)
+        else if (timerSeconds < songLength)
         {
-            Difficulty(6);
+            Difficulty(1);
 
         }
     }
@@ -60,19 +63,14 @@ public class Spawner : MonoBehaviour
         if (timerSeconds < 1)
 
         {
-
-
-            print("Count down finished");
-
             CancelInvoke("CountDown");
             CancelInvoke("Spawn");
-
         }
 
     }
     void Difficulty(int diff)
     {
-        int rnd = Random.Range(1, 3);
+        int rnd = Random.Range(1, diff);
         for (int i = 0; i < rnd; i++)
         {
             obj.transform.localPosition = vecPos[Random.Range(0, 9)];
