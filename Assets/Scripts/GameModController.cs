@@ -17,14 +17,16 @@ public class GameModController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreUI.text = currentscore.ToString();
-        hpUI.text = hp.ToString();
-        comboUI.text = combo.ToString();
+        scoreUI.text = 0.ToString();
+        hpUI.text = 900.ToString();
+        comboUI.text = 0.ToString();
+        scrollHpUI.offsetMax = new Vector2(900, -10);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         scrollNote();
     }
 
@@ -36,10 +38,7 @@ public class GameModController : MonoBehaviour
         comboUI.text = combo.ToString();
         hpUI.text = hp.ToString();
         scrollHpUI.offsetMax = new Vector2(hp, -10);
-        if(currentscore == 300)
-        {
-            SceneManager.LoadScene("MapSelect");
-        }
+
 
 
         if (Input.GetMouseButtonDown(0))

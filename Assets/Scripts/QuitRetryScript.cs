@@ -9,10 +9,18 @@ public class QuitRetryScript : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene("PrototypeScene");
-
+        ResetScore();
     }
     public void Quit()
     {
         SceneManager.LoadScene("MapSelect");
+        ResetScore();
+    }
+
+    void ResetScore()
+    {
+        GameModController.combo = 0;
+        GameModController.currentscore = 0;
+        GameModController.hp = 900;
     }
 }
