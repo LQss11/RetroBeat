@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 342373873478840912}
   - component: {fileID: 342373873478840919}
   - component: {fileID: 342373873478840918}
-  - component: {fileID: 342373873478840917}
   m_Layer: 0
   m_Name: Play
   m_TagString: Untagged
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 342373873478840917}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -213,15 +212,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &342373873478840917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342373873478840923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d8d9c2bd64fb5148950861465119b98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

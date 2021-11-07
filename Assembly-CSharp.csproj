@@ -55,13 +55,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\NoteController.cs" />
+    <Compile Include="Assets\Scripts\SelectMapScene\SwitchSong.cs" />
     <Compile Include="Assets\Scripts\GameModController.cs" />
     <Compile Include="Assets\Scripts\Env\Scroll.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\SelectMapScene\PlayButton.cs" />
     <Compile Include="Assets\Scripts\SelectMapScene\SongController.cs" />
-    <Compile Include="Assets\Scripts\SelectMapScene\SwitchSong.cs" />
     <Compile Include="Assets\Scripts\SelectMapScene\RotateObject.cs" />
+    <Compile Include="Assets\Scripts\PauseMenuButtons.cs" />
+    <Compile Include="Assets\Scripts\QuitRetryScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

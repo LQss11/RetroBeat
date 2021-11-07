@@ -16,9 +16,5 @@ public class PlayButton : MonoBehaviour
     {
         SceneManager.LoadScene("PrototypeScene");
     }
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MapSelect");
-    }
     // Update is called once per frame
 }

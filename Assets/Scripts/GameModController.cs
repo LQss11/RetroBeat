@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameModController : MonoBehaviour
 {
@@ -35,8 +36,11 @@ public class GameModController : MonoBehaviour
         comboUI.text = combo.ToString();
         hpUI.text = hp.ToString();
         scrollHpUI.offsetMax = new Vector2(hp, -10);
+        if(currentscore == 300)
+        {
+            SceneManager.LoadScene("MapSelect");
+        }
 
-     
 
         if (Input.GetMouseButtonDown(0))
         {

@@ -32,25 +32,7 @@ public class SongController : MonoBehaviour
 
         GetComponent<AudioSource>().clip = selectedAudioClip;
         GetComponent<AudioSource>().Play();
-        /*
-        foreach (AudioClip ac in audioClips)
-        {
-            if (ac.name == "Kove - Power")
-            {
-                bpm = 174f;
 
-            }
-            else
-            {
-                bpm = 150f;
-                songName = ac.name.ToString();
-                length = SongLength(ac);
-
-            }
-
-
-        }
-        */
 
         artistUI.text = selectedAudioClip.name.ToString();
         lengthUI.text = SongLength(selectedAudioClip);

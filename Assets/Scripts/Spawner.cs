@@ -17,8 +17,6 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject.FindGameObjectWithTag("MenuSongManager").GetComponent<AudioSource>().clip = SongController.selectedAudioClip;
-
         timerSeconds = SongController.selectedAudioClip.length;
         songLength = SongController.selectedAudioClip.length + 0.01f;
         InvokeRepeating("Spawn", 2, (60 / SongController.bpm) * 2);
