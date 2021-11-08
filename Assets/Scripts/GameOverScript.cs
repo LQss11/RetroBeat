@@ -23,6 +23,8 @@ public class GameOverScript : MonoBehaviour
             PauseButtonUI.SetActive(false);
             gameOverMenuUI.SetActive(true);
             Time.timeScale = 0f;
+            PauseMenuButtons.GameIsPause = true;
+
         }
     }
 }

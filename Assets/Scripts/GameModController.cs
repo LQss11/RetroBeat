@@ -17,6 +17,7 @@ public class GameModController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PauseMenuButtons.GameIsPause = false;
         scoreUI.text = 0.ToString();
         hpUI.text = 900.ToString();
         comboUI.text = 0.ToString();
@@ -52,9 +53,12 @@ public class GameModController : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Note")
                     {
-                        Destroy(hit.collider.gameObject);
-                        combo += 1;
-                        currentscore += 100 * combo;
+                        if (!PauseMenuButtons.GameIsPause)
+                        {
+                            Destroy(hit.collider.gameObject);
+                            combo += 1;
+                            currentscore += 100 * combo;
+                        }
                     }
                 }
             }
