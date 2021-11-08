@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\SelectMapScene\RotateObject.cs" />
     <Compile Include="Assets\Scripts\PauseMenuButtons.cs" />
     <Compile Include="Assets\Scripts\QuitRetryScript.cs" />
+    <Compile Include="Assets\Scripts\GameOverScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NoteController : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class NoteController : MonoBehaviour
             Destroy(this.gameObject);
             GameModController.combo = 0;
             GameModController.hp -= 100;
+
+
+
         }
 
         /*
