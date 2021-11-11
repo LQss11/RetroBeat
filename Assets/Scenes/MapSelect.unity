@@ -1263,6 +1263,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 77a00edb3003a9f47b1af5e101e06956, type: 3}
   - {fileID: 8300000, guid: 0abf56150c699df428072e0f74273c36, type: 3}
   - {fileID: 8300000, guid: 0a15875692ac4834596af8a8fd5ea6d8, type: 3}
+  - {fileID: 8300000, guid: 1205b505e2e1d9a45a1d542d4a481d9c, type: 3}
   artistUI: {fileID: 465915610}
   bpmUI: {fileID: 573254188}
   lengthUI: {fileID: 1703151158}
