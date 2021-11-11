@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class NoteController : MonoBehaviour
 {
@@ -15,7 +14,10 @@ public class NoteController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= Time.deltaTime * transform.forward * 2;
+
+
+
+        transform.position -= Time.deltaTime * transform.forward * Random.Range(1, 10);
 
         if (transform.position.z < -1f)
         {

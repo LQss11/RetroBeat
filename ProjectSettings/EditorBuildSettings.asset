@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapSelect.unity
     guid: 88e767fbaf597c1468ffe5890707488d
+  - enabled: 1
+    path: Assets/Scenes/FinalScore.unity
+    guid: c0a86e29268c86847813b37934557970
   m_configObjects: {}

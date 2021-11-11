@@ -17,36 +17,37 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("x = " + Input.acceleration.x + "y = " + Input.acceleration.y);
         /*
     if (Input.acceleration.x > -0.1)
 {
 
 }
 */
-        if ((Input.acceleration.x < -0.01 || Input.GetKey("q")) && transform.position.x > -2.5)
+        if ((Input.acceleration.x < -0.2f || Input.GetKey("q")) && transform.position.x > -2.5)
         {
-            transform.position -= Time.deltaTime * transform.right * speed;
+            transform.position -= Time.deltaTime * transform.right * speed * (1 - Input.acceleration.x);
             if (transform.position.y > -1.5)
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, lerpRotation), Time.deltaTime * t);
         }
-        if ( (Input.acceleration.x > 0.01 || Input.GetKey("d")) && transform.position.x < 2.5)
+        if ( (Input.acceleration.x > 0.2f || Input.GetKey("d")) && transform.position.x < 2.5)
         {
-            transform.position += Time.deltaTime * transform.right * speed;
+            transform.position += Time.deltaTime * transform.right * speed * (1 + Input.acceleration.x);
             if (transform.position.y > -1.5)
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -lerpRotation), Time.deltaTime * t);
 
 
         }
-        if ((Input.acceleration.y > 0.01 || Input.GetKey("z")) && transform.position.y < 5)
+        if ((Input.acceleration.y > -0.4f || Input.GetKey("z")) && transform.position.y < 5)
         {
 
-            transform.position += Time.deltaTime * transform.up * speed;
+            transform.position += Time.deltaTime * transform.up * speed * (1 - Input.acceleration.y);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-lerpRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z), Time.deltaTime * t);
 
         }
-        if ((Input.acceleration.y < -0.01 || Input.GetKey("s")) && transform.position.y > -1.5)
+        if ((Input.acceleration.y < -0.8f || Input.GetKey("s")) && transform.position.y > -1.5)
         {
-            transform.position -= Time.deltaTime * transform.up * speed;
+            transform.position -= Time.deltaTime * transform.up * speed * (1 - Input.acceleration.y);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(lerpRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z), Time.deltaTime * t);
 
         }

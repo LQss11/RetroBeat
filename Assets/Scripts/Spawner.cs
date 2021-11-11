@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -38,13 +39,15 @@ public class Spawner : MonoBehaviour
             GetComponent<AudioSource>().Play();
             songPlayed = true;
         }
-        if (timerSeconds < songLength / 2)
-        {
-            Difficulty(6);
-        }
-        else if (timerSeconds < songLength / 4)
+        /*
+        if (timerSeconds < songLength / 4)
         {
             Difficulty(3);
+        }
+        */
+        if (timerSeconds < songLength / 2)
+        {
+            Difficulty(2);
         }
         else if (timerSeconds < songLength)
         {
@@ -61,8 +64,18 @@ public class Spawner : MonoBehaviour
         if (timerSeconds < 1)
 
         {
+
+            SceneManager.LoadScene("FinalScore");
             CancelInvoke("CountDown");
+
+
+        }
+        if (timerSeconds < 7)
+
+        {
             CancelInvoke("Spawn");
+
+
         }
 
     }

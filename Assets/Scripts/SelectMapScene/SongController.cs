@@ -47,7 +47,7 @@ public class SongController : MonoBehaviour
 
         if (selectedAudioClip.name == "Donbor - Brume Magnatron III")
         {
-            bpm = 220f;
+            bpm = 110f;
 
         }
         else if (selectedAudioClip.name == "W O L F C L U B - California Days (Official Video)")
@@ -59,9 +59,31 @@ public class SongController : MonoBehaviour
         else if (selectedAudioClip.name == "Lucy In Disguise - Fluorescent Moon")
 
         {
-            bpm = 200f;
+            bpm = 100f;
 
         }
+        else if (selectedAudioClip.name == "Driver86 - Not Like Us(feat.Oceanside85)")
+
+        {
+            bpm = 105f;
+
+        }
+        else if (selectedAudioClip.name == "Creative Commons Synthwave)")
+
+        {
+            bpm = 130f;
+
+        }
+        else if (selectedAudioClip.name == "Demo Song)")
+
+        {
+            bpm = 150f;
+
+        }
+
+
+        
+
         bpmUI.text = bpm.ToString();
 
         songName = selectedAudioClip.name.ToString();
