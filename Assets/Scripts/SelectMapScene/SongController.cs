@@ -8,7 +8,6 @@ public class SongController : MonoBehaviour
 {
     public static float bpm;
     public string songName;
-    public string length;
     public List<AudioClip> ac2;
 
     public Text artistUI;
@@ -25,9 +24,6 @@ public class SongController : MonoBehaviour
         audioClips = ac2;
         selectedAudioClip = audioClips[0];
 
-        //Debug.Log(GameObject.FindGameObjectWithTag("MenuSongManager"));
-        //Debug.Log(audioClips.FindIndex(a => a.name == "W O L F C L U B - California Days (Official Video)"));
-
         index = 0;
 
         GetComponent<AudioSource>().clip = selectedAudioClip;
@@ -36,45 +32,44 @@ public class SongController : MonoBehaviour
 
         artistUI.text = selectedAudioClip.name.ToString();
         lengthUI.text = SongLength(selectedAudioClip);
-        bpmUI.text = "174";
+        bpmUI.text = "100";
     }
 
     // Update is called once per frame
     void Update()
     {
-        artistUI.text = selectedAudioClip.name.ToString();
-        lengthUI.text = SongLength(selectedAudioClip);
 
-        if (selectedAudioClip.name == "Donbor - Brume Magnatron III")
+        songName = selectedAudioClip.name.ToString();
+        if (songName == "Donbor - Brume Magnatron III")
         {
             bpm = 110f;
 
         }
-        else if (selectedAudioClip.name == "W O L F C L U B - California Days (Official Video)")
+        else if (songName == "W O L F C L U B - California Days (Official Video)")
 
         {
             bpm = 150f;
 
         }
-        else if (selectedAudioClip.name == "Lucy In Disguise - Fluorescent Moon")
+        else if (songName == "Lucy In Disguise - Fluorescent Moon")
 
         {
             bpm = 100f;
 
         }
-        else if (selectedAudioClip.name == "Driver86 - Not Like Us(feat.Oceanside85)")
+        else if (songName == "Driver86 - Not Like Us (feat. Oceanside85)")
 
         {
             bpm = 105f;
 
         }
-        else if (selectedAudioClip.name == "Creative Commons Synthwave)")
+        else if (songName == "Creative Commons Synthwave")
 
         {
             bpm = 130f;
 
         }
-        else if (selectedAudioClip.name == "Demo Song)")
+        else if (songName == "Demo Song")
 
         {
             bpm = 150f;
@@ -82,12 +77,13 @@ public class SongController : MonoBehaviour
         }
 
 
-        
+        artistUI.text = selectedAudioClip.name.ToString();
+        lengthUI.text = SongLength(selectedAudioClip);
 
         bpmUI.text = bpm.ToString();
 
-        songName = selectedAudioClip.name.ToString();
-        length = SongLength(selectedAudioClip);
+        Debug.Log("Song name = " + songName + " and Bpm = " + bpm);
+
     }
     public string SongLength(AudioClip ac)
     {

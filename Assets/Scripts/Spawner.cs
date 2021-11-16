@@ -39,13 +39,13 @@ public class Spawner : MonoBehaviour
             GetComponent<AudioSource>().Play();
             songPlayed = true;
         }
-        /*
+        
         if (timerSeconds < songLength / 4)
         {
             Difficulty(3);
         }
-        */
-        if (timerSeconds < songLength / 2)
+        
+        else if (timerSeconds < songLength / 2)
         {
             Difficulty(2);
         }

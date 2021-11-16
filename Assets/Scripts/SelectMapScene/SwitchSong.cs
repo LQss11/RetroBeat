@@ -20,7 +20,6 @@ public class SwitchSong : MonoBehaviour
             SongController.selectedAudioClip = SongController.audioClips[i];
             SongController.index++;
         }
-        Debug.Log("i =  " + i + " index is " + SongController.index);
         GameObject.FindGameObjectWithTag("MenuSongManager").GetComponent<AudioSource>().clip = SongController.selectedAudioClip;
         GameObject.FindGameObjectWithTag("MenuSongManager").GetComponent<AudioSource>().Play();
     }
@@ -39,7 +38,6 @@ public class SwitchSong : MonoBehaviour
             SongController.selectedAudioClip = SongController.audioClips[i];
             SongController.index--;
         }
-        Debug.Log("i =  " + i + " index is " + SongController.index);
         GameObject.FindGameObjectWithTag("MenuSongManager").GetComponent<AudioSource>().clip = SongController.selectedAudioClip;
         GameObject.FindGameObjectWithTag("MenuSongManager").GetComponent<AudioSource>().Play();
     }
